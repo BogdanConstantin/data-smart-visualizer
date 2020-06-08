@@ -1,0 +1,15 @@
+.datasets-list{
+    height: 75%;
+    margin: 50px;
+    border: 1px solid black;
+    .list-header {
+        display: flex;
+        border-bottom: 3px solid black;
+        justify-content: space-between;
+        .list-header-title {
+            padding: 15px;
+            font-size: 25px;
+            color: #333333;
+        }
+    }
+}

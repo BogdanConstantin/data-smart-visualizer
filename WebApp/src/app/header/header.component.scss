@@ -1,0 +1,20 @@
+#header {
+    display: flex;
+    border-bottom: 3px solid black;
+    justify-content: space-between;
+    .header-title {
+        padding: 30px;
+        font-size: 50px;
+        color: #03a9f4;
+    }
+    .header-input {
+        height: 30px;
+        width: 250px;
+        margin: 41px;
+        color: #03a9f4;
+    }
+}
+
+::placeholder {
+    color: #03a9f4;
+}
