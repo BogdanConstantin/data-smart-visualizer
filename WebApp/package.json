@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node static-serve.js",
+    "dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -23,6 +24,7 @@
     "@angular/router": "~9.1.9",
     "@ng-select/ng-select": "^4.0.0",
     "chart.js": "^2.9.3",
+    "express": "^4.17.1",
     "ngx-input-search": "^3.0.8",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
