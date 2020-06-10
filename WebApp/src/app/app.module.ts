@@ -9,12 +9,14 @@ import { NgxInputSearchModule } from 'ngx-input-search';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { FormsModule } from '@angular/forms';
 import { DatasetsListComponent } from './datasets-list/datasets-list.component';
+import { DatasetCardComponent } from './dataset-card/dataset-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DatasetsListComponent
+    DatasetsListComponent,
+    DatasetCardComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ export class DatasetsListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selectedOption = this.defaultBindingsList[0];
   }
 
 }
