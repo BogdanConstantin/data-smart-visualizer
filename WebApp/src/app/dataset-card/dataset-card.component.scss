@@ -1,4 +1,5 @@
 .dataset-card {
+    display: flex;
     height: 20%;
     margin: 50px;
     border: 1px solid black;
@@ -7,5 +8,63 @@
         padding: 6px;
         width: 150px;
         height: 100px;
+    }
+
+    .card-info{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .card-details {
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            cursor: pointer;
+
+            .article-title {
+                width: 500px;
+                font-size: 16px;
+                padding: 2px;
+                font-weight: bold;
+                border-bottom: 1px solid black;
+            }
+
+            .icon-details {
+                display: flex;
+                .icon {
+                    height: 25px;
+                    width: 25px;
+                }
+                .description {
+                    font-size: 15px;
+                    padding-top: 10px;
+                }
+            }
+        }
+
+        .card-likes{
+            display: flex;
+            width: 30%;
+            #like-icon {
+                cursor: pointer;
+                margin-top: 35px;
+                margin-right: 10px;
+                width: 40px;
+                height: 40px;
+            }
+            #dislike-icon {
+                cursor: pointer;
+                margin-top: 30px;
+                margin-right: 10px;
+                width: 45px;
+                height: 45px;
+            }
+            .reactions {
+                width: 100px;
+                margin-top: 50px;
+                margin-right: 100px;
+                font-size: 20px;
+            }
+        }
     }
 }

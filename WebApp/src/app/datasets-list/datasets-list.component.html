@@ -1,13 +1,59 @@
-<div class="datasets-list">
+<div [hidden]="!showDatasets" class="datasets-list">
     <div class="list-header">
         <span class="list-header-title">Public Datasets</span>
         <div class="header-right">
             <span class="list-header-title">Sort by:</span>
-            <ng-select [items]="defaultBindingsList" [(ngModel)]="selectedOption">
+            <ng-select [items]="defaultBindingsList" [(ngModel)]="selectedOption" (change)="dropdownFilter($event)">
             </ng-select>
         </div>
     </div>
-    <div class="datasets">
-        <app-dataset-card></app-dataset-card>
+    <div  class="datasets">
+        <ng-container  *ngFor="let dataset of filteredDatasets">
+            <app-dataset-card [dataset]="dataset" [details]="true" (cardCliked)="showDetails(dataset, $event)"></app-dataset-card>
+        </ng-container>
     </div>
 </div>
+<div [hidden]="showDatasets">
+    <app-dataset-card [dataset]="datasetSelected" [details]="false" (cardCliked)="showDetails(datasetSelected, $event)"></app-dataset-card>
+    <div class="datasets-list">
+        <div class="list-header">
+            <span class="list-header-title">Dataset Description</span>
+        </div>
+        <div class="description">{{datasetSelected.description}}</div>
+    </div>
+    <div class="datasets-list">
+        <div class="list-header">
+            <span class="list-header-title">Useful Files</span>
+        </div>
+        <ul>
+            <li>
+                File 1
+                <img class="download" src="../../assets/downloads.png">
+            </li>
+            
+            <li>
+                File 2
+                <img class="download" src="../../assets/downloads.png">
+            </li>
+            
+            <li>
+                File 3
+                <img class="download" src="../../assets/downloads.png">
+            </li>
+            
+            <li>
+                File 4
+                <img class="download" src="../../assets/downloads.png">
+            </li>
+        </ul>
+    </div>
+    <div class="datasets-list">
+        <div class="list-header">
+            <span class="list-header-title">Activity</span>
+        </div>
+        <div class="chart">
+            <canvas id="line-chart" width="800" height="450"></canvas>
+        </div>
+    </div>
+</div>
+

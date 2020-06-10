@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'WebApp';
+  title = 'All News';
+  showSearch = true;
+  searchCriteria = null;
+
+  toggleSearch(show: boolean): void {
+    console.log(show);
+    this.showSearch = show;
+  }
+
+  search(searchCriteria: string): void {
+    this.searchCriteria = searchCriteria;
+  }
 }

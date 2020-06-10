@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
     "@ng-select/ng-select": "^4.0.0",
+    "chart.js": "^2.9.3",
     "ngx-input-search": "^3.0.8",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",

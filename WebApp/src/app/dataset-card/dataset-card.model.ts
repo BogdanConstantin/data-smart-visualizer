@@ -5,4 +5,7 @@ export class DataCardModel {
     likes: number;
     dislikes: number;
     image: string;
+    description: string;
+    like = false;
+    dislike = false;
 }

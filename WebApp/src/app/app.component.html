@@ -1,3 +1,3 @@
-<app-header></app-header>
-<app-datasets-list></app-datasets-list>
+<app-header [showSearch]="showSearch" (search)="search($event)"></app-header>
+<app-datasets-list [searchCriteria]="searchCriteria" (details)="toggleSearch($event)"></app-datasets-list>
 <router-outlet></router-outlet>

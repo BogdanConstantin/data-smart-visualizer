@@ -1,5 +1,24 @@
-<div class="dataset-card">
-    <img [src]="imageSrc">
-    
-    
+<div *ngIf="dataset" class="dataset-card">
+    <img [src]="dataset.image">
+    <div class="card-info">
+        <div class="card-details" (click)="showDetails()">
+            <span class="article-title">{{dataset.title}}</span>
+            <div class="icon-details">
+                <img class="icon" src="../../assets/man.png">
+                <span class="description">{{dataset.author}}</span> 
+            </div>
+            <div class="icon-details">
+                <img class="icon" src="../../assets/calendar.png">
+                <span class="description"> {{dataset.days}} days</span> 
+            </div>
+        </div>
+        <div class="card-likes">
+            <img *ngIf="dataset.like" id="like-icon" src="../../assets/like-red.png" (click)="like(false)">
+            <img *ngIf="!dataset.like" id="like-icon" src="../../assets/like-black.png" (click)="like(true)">
+            <span class="reactions">{{dataset.likes}}</span>
+            <img *ngIf="dataset.dislike" id="dislike-icon" src="../../assets/dislike-red.png" (click)="dislike(false)">
+            <img *ngIf="!dataset.dislike" id="dislike-icon" src="../../assets/dislike-black.png" (click)="dislike(true)">
+            <span class="reactions">{{dataset.dislikes}}</span>
+        </div>
+    </div>
 </div>

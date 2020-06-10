@@ -1,4 +1,4 @@
 <header id="header">
-    <div class="header-title">DATA SMART VISUALIZER</div>
-    <input class="header-input" type="text" placeholder="Search for datasets" (input)="onSearchChange($event.target.value)"/>
+    <div class="header-title">ALL NEWS</div>
+    <input *ngIf="showSearch" class="header-input" type="text" placeholder="Search for datasets" (input)="onSearchChange($event.target.value)"/>
 </header>

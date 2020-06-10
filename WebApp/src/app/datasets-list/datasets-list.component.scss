@@ -22,4 +22,24 @@
     .datasets {
         height: 80%;
     }
+    .description {
+        margin:20px;
+    }
+
+    li {
+        margin:15px;
+        .download {
+            cursor: pointer;
+            margin-left: 5px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .chart {
+        padding-top: 40px;
+        padding-left: 100px;  
+        height: 500px;
+        width: 800px;
+      }
 }
